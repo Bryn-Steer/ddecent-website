@@ -835,5 +835,80 @@
 				</div>
 			</div>
 		</div><!-- styleswitch END -->
+
+	<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		const form = document.querySelector(
+			"#right4 #contact-form form"
+		);
+
+		if (!form) return;
+
+		const button = form.querySelector('button[type="submit"]');
+
+		const status = document.createElement("p");
+		status.className = "contact-form-status";
+		status.setAttribute("role", "status");
+		status.setAttribute("aria-live", "polite");
+		form.appendChild(status);
+
+		form.addEventListener("submit", async function (event) {
+			event.preventDefault();
+
+			if (!form.reportValidity()) return;
+
+			button.disabled = true;
+			status.className = "contact-form-status";
+			status.textContent = "Sending your message...";
+
+			const formData = new FormData(form);
+			const data = Object.fromEntries(formData.entries());
+
+			try {
+				const response = await fetch(
+					"https://api.web3forms.com/submit",
+					{
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+							"Accept": "application/json"
+						},
+						body: JSON.stringify(data)
+					}
+				);
+
+				const result = await response.json();
+
+				if (response.ok && result.success) {
+					form.reset();
+
+					status.className =
+						"contact-form-status success";
+
+					status.textContent =
+						"Message sent successfully. " +
+						"We'll be in touch soon.";
+				} else {
+					status.className =
+						"contact-form-status error";
+
+					status.textContent =
+						result.message ||
+						"Message could not be sent. Please try again.";
+				}
+
+			} catch (error) {
+				status.className =
+					"contact-form-status error";
+
+				status.textContent =
+					"Connection error. Please try again.";
+			} finally {
+				button.disabled = false;
+			}
+		});
+	});
+	</script>
+
 	</body>
 </html>

@@ -7763,3 +7763,34 @@ background-position: center;
         min-height: 50px !important;
     }
 }
+
+
+/* DECENT CONTACT FORM STATUS */
+
+#right4 .contact-form-status {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.6;
+    letter-spacing: 0.3px;
+    color: #ffffff;
+}
+
+#right4 .contact-form-status:empty {
+    display: none;
+}
+
+#right4 .contact-form-status.success {
+    color: #a7e5b2;
+}
+
+#right4 .contact-form-status.error {
+    color: #ff8e8e;
+}
+
+#right4 #contact-form button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
