@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* layout */
+a {
+color: #df4a32;
+}
+
+p a {
+color: #df4a32;
+}
+
+.change-color {
+color: #df4a32;
+}
+
+/* icon effect */
+.line-left {
+background: #df4a32;
+}
+
+/* countdown */
+#countdown .countdown-content {
+color: #df4a32;
+}
+
+/* buttons */
+.btn {
+background: #df4a32;
+}
+
+/* contact form */
+#form input:focus,
+#form textarea:focus {
+border-color: #df4a32;
+}
+
+/* menu ul, li */
+.hvr-shutter-out-horizontal:before {
+background: #df4a32;
+}
+
+/* multiscroll */
+#multiscroll-nav li .active span {
+background: #df4a32;
+}
+
+/* owlCarousel */
+.owl-page.active span {    
+background: #df4a32;
+}
+
+/* core vegas */
+.vegas-timer-progress {
+background: #df4a32;
+}
