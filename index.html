@@ -47,8 +47,6 @@
 		<!-- google fonts start -->
 		<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7COswald:300,400,700%7CDosis:200,300,400,500,600,700,800&display=swap" rel="stylesheet" type="text/css">
 		<!-- google fonts end -->
-		<!-- COMING SOON MODE: Poppins stands in for the brand typeface Origin (no web licence in the repo) -->
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet" type="text/css">
 
 		<!--[if lt IE 9]>
             <script src="bower_components/html5shiv/dist/html5shiv.js" type="text/javascript"></script>
@@ -64,139 +62,121 @@
 		          below (keep their contents).
 		       3. Optionally delete the "COMING SOON MODE" block at the end
 		          of css/style.css (it is scoped to #coming-soon, so it is
-		          harmless if left in place), and the img/coming-soon/ folder.
+		          harmless if left in place).
 		     The original markup is wrapped in <template> rather than an
 		     HTML comment because it contains its own comments, which
 		     cannot be nested. Template content is inert: not rendered,
 		     no images/video loaded, no IDs in the live document.
 		     ============================================================ -->
 		<main class="coming-soon" id="coming-soon">
-			<!-- atmosphere (decorative only, no imagery or copy) start.
-			     The previous collage version is archived in _archive/coming-soon-collage/. -->
-			<div class="cs-atmos" aria-hidden="true">
-				<div class="cs-light"></div>
-				<div class="cs-shadow"></div>
-				<div class="cs-stain cs-stain-a"></div>
-				<div class="cs-stain cs-stain-b"></div>
-				<div class="cs-leak"></div>
-				<div class="cs-scrawl"></div>
-				<div class="cs-grain"></div>
-				<div class="cs-vignette"></div>
-				<div class="cs-corners"></div>
-			</div>
-			<!-- atmosphere end -->
+			<!-- original countdown + newsletter markup, copied unchanged from the
+			     #right-1 panel of the full homepage (commit ca945cb) -->
+			<div id="countdown">
+							<div class="hero-center-container-right left-position">
+								<h5>
+									We're Working On It / The End Is Near
+								</h5>
+								<div class="countdown-content">
+	<!-- countdown start -->
+	<span class="days">00</span>
+	<span class="timeRefDays">Days</span>
 
-			<header class="cs-seal">
-				<h1>
-					<img src="img/coming-soon/monogram.webp" alt="Decent" width="250" height="280">
-				</h1>
-			</header>
+	<span class="hours">00</span>
+	<span class="timeRefHours">Hours</span>
 
-			<div class="coming-soon-inner">
-				<!-- countdown start -->
-				<div id="countdown" role="timer" aria-label="Time until launch">
-					<div class="countdown-content">
-						<div class="cs-unit">
-							<span class="days">00</span>
-							<span class="timeRefDays">Days</span>
-						</div>
-						<div class="cs-unit">
-							<span class="hours">00</span>
-							<span class="timeRefHours">Hours</span>
-						</div>
-						<div class="cs-unit">
-							<span class="minutes">00</span>
-							<span class="timeRefMinutes">Minutes</span>
-						</div>
-						<div class="cs-unit">
-							<span class="seconds">00</span>
-							<span class="timeRefSeconds">Seconds</span>
-						</div>
-					</div>
-					<div class="until-launch">
-						Until Launch
-					</div>
-				</div><!-- countdown end -->
+	<span class="minutes">00</span>
+	<span class="timeRefMinutes">Minutes</span>
 
-				<!-- Newsletter form start -->
-				<div id="subscribe-wrapper">
-					<div id="newsletter">
-						<div class="newsletter" aria-live="polite">
+	<span class="seconds">00</span>
+	<span class="timeRefSeconds">Seconds</span>
+	<!-- countdown end -->
 
-							<form
-								action="https://api.web3forms.com/submit"
-								id="subscribe"
-								method="POST"
-								name="subscribe"
-							>
+	<div class="until-launch">
+		
+	</div>
+</div>
+								
+<!-- Newsletter form start -->
+<div id="subscribe-wrapper">
+    <div id="newsletter">
+        <div class="newsletter">
 
-								<!-- Web3Forms Access Key -->
-								<input
-									type="hidden"
-									name="access_key"
-									value="08bf191f-1da1-451b-86cb-bd282f9daf20"
-								>
+            <form
+                action="https://api.web3forms.com/submit"
+                id="subscribe"
+                method="POST"
+                name="subscribe"
+            >
 
-								<!-- Email Notification Subject -->
-								<input
-									type="hidden"
-									name="subject"
-									value="DECENT - New Launch Subscriber"
-								>
+                <!-- Web3Forms Access Key -->
+                <input
+                    type="hidden"
+                    name="access_key"
+                    value="08bf191f-1da1-451b-86cb-bd282f9daf20"
+                >
 
-								<!-- Sender Name -->
-								<input
-									type="hidden"
-									name="from_name"
-									value="DECENT Website"
-								>
+                <!-- Email Notification Subject -->
+                <input
+                    type="hidden"
+                    name="subject"
+                    value="DECENT - New Launch Subscriber"
+                >
 
-								<!-- Subscription Type -->
-								<input
-									type="hidden"
-									name="subscription_type"
-									value="Launch Newsletter"
-								>
+                <!-- Sender Name -->
+                <input
+                    type="hidden"
+                    name="from_name"
+                    value="DECENT Website"
+                >
 
-								<!-- Spam Protection -->
-								<input
-									type="checkbox"
-									name="botcheck"
-									style="display: none;"
-									tabindex="-1"
-									autocomplete="off"
-								>
+                <!-- Subscription Type -->
+                <input
+                    type="hidden"
+                    name="subscription_type"
+                    value="Launch Newsletter"
+                >
 
-								<!-- Subscriber Email -->
-								<input
-									class="subscribe-requiredField subscribe-email"
-									id="subscribe-email"
-									name="email"
-									placeholder="Email"
-									type="email"
-									autocomplete="email"
-									aria-label="Email address"
-									required
-								>
+                <!-- Spam Protection -->
+                <input
+                    type="checkbox"
+                    name="botcheck"
+                    style="display: none;"
+                    tabindex="-1"
+                    autocomplete="off"
+                >
 
-								<!-- Subscribe Button -->
-								<button
-									type="submit"
-									class="btn btn-padding btn-pc"
-								>
-									<span class="mask"></span>
-									<span class="btn-label">
-										Subscribe
-									</span>
-								</button>
+                <!-- Subscriber Email -->
+                <input
+                    class="subscribe-requiredField subscribe-email"
+                    id="subscribe-email"
+                    name="email"
+                    placeholder="Email"
+                    type="email"
+                    autocomplete="email"
+                    aria-label="Email address"
+                    required
+                >
 
-							</form>
+                <!-- Subscribe Button -->
+                <button
+                    type="submit"
+                    class="btn btn-padding btn-pc"
+                >
+                    <span class="mask"></span>
+                    <span class="btn-label">
+                        Subscribe
+                    </span>
+                </button>
 
-						</div>
-					</div>
-				</div>
-				<!-- Newsletter form end -->
-			</div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<!-- Newsletter form end -->
+
+							</div><!-- introduction end -->
+						</div><!-- countdown end -->
 		</main>
 		<!-- COMING SOON MODE (temporary) end -->
 
@@ -562,7 +542,7 @@
 						<div id="countdown">
 							<div class="hero-center-container-right left-position">
 								<h5>
-									We're Working On It / Stay Tuned
+									We're Working On It / The End Is Near
 								</h5>
 								<div class="countdown-content">
 	<!-- countdown start -->
