@@ -7,23 +7,31 @@
 	<!--<![endif]-->
 		<head>
 		<meta charset="utf-8">
+		<!-- COMING SOON MODE: original title/description/social tags disabled - they reveal the brand.
+		     Restore these and delete the temporary versions below.
 		<title>
 			Decent || The apocalypse is ordinary. Dress decent.
 		</title>
 		<meta content="The apocalypse is ordinary. Dress decent. Decent creates premium clothing for the long emergency. Quiet rebellion. Style as survival." name="description">
-		<meta content="Decent" name="author">
 		<meta content="Decent, The apocalypse is ordinary. Dress decent., premium clothing, premium streetwear, heavyweight t-shirts, heavyweight hoodies, quiet rebellion, style as survival, existential fashion, alternative fashion" name="keywords">
+		<meta property="og:title" content="Decent || The apocalypse is ordinary. Dress decent.">
+		<meta property="og:description" content="The apocalypse is ordinary. Dress decent.">
+		<meta name="twitter:title" content="Decent || The apocalypse is ordinary. Dress decent.">
+		<meta name="twitter:description" content="The apocalypse is ordinary. Dress decent.">
+		-->
+		<!-- COMING SOON MODE: temporary, deliberately uninformative -->
+		<title>Decent</title>
+		<meta property="og:title" content="Decent">
+		<meta name="twitter:title" content="Decent">
+		<!-- COMING SOON MODE end -->
+		<meta content="Decent" name="author">
 		<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots">
 		<meta content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" name="viewport">
 
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="Decent">
-		<meta property="og:title" content="Decent || The apocalypse is ordinary. Dress decent.">
-		<meta property="og:description" content="The apocalypse is ordinary. Dress decent.">
 
 		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="Decent || The apocalypse is ordinary. Dress decent.">
-		<meta name="twitter:description" content="The apocalypse is ordinary. Dress decent.">
 
 		<meta name="theme-color" content="#231f20">
 
@@ -39,12 +47,161 @@
 		<!-- google fonts start -->
 		<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900%7COswald:300,400,700%7CDosis:200,300,400,500,600,700,800&display=swap" rel="stylesheet" type="text/css">
 		<!-- google fonts end -->
+		<!-- COMING SOON MODE: Poppins stands in for the brand typeface Origin (no web licence in the repo) -->
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&display=swap" rel="stylesheet" type="text/css">
 
 		<!--[if lt IE 9]>
             <script src="bower_components/html5shiv/dist/html5shiv.js" type="text/javascript"></script>
         <![endif]-->
 	</head>
 	<body>
+		<!-- ============================================================
+		     COMING SOON MODE (temporary) start
+		     Only the countdown and newsletter form are shown.
+		     TO RESTORE THE FULL SITE:
+		       1. Delete this <main id="coming-soon"> block.
+		       2. Remove the two <template data-coming-soon-hidden> wrappers
+		          below (keep their contents).
+		       3. Optionally delete the "COMING SOON MODE" block at the end
+		          of css/style.css (it is scoped to #coming-soon, so it is
+		          harmless if left in place), and the img/coming-soon/ folder.
+		     The original markup is wrapped in <template> rather than an
+		     HTML comment because it contains its own comments, which
+		     cannot be nested. Template content is inert: not rendered,
+		     no images/video loaded, no IDs in the live document.
+		     ============================================================ -->
+		<main class="coming-soon" id="coming-soon">
+			<!-- atmosphere (decorative only, no imagery or copy) start.
+			     The previous collage version is archived in _archive/coming-soon-collage/. -->
+			<div class="cs-atmos" aria-hidden="true">
+				<div class="cs-light"></div>
+				<div class="cs-shadow"></div>
+				<div class="cs-stain cs-stain-a"></div>
+				<div class="cs-stain cs-stain-b"></div>
+				<div class="cs-leak"></div>
+				<div class="cs-scrawl"></div>
+				<div class="cs-grain"></div>
+				<div class="cs-vignette"></div>
+				<div class="cs-corners"></div>
+			</div>
+			<!-- atmosphere end -->
+
+			<header class="cs-seal">
+				<h1>
+					<img src="img/coming-soon/monogram.webp" alt="Decent" width="250" height="280">
+				</h1>
+			</header>
+
+			<div class="coming-soon-inner">
+				<!-- countdown start -->
+				<div id="countdown" role="timer" aria-label="Time until launch">
+					<div class="countdown-content">
+						<div class="cs-unit">
+							<span class="days">00</span>
+							<span class="timeRefDays">Days</span>
+						</div>
+						<div class="cs-unit">
+							<span class="hours">00</span>
+							<span class="timeRefHours">Hours</span>
+						</div>
+						<div class="cs-unit">
+							<span class="minutes">00</span>
+							<span class="timeRefMinutes">Minutes</span>
+						</div>
+						<div class="cs-unit">
+							<span class="seconds">00</span>
+							<span class="timeRefSeconds">Seconds</span>
+						</div>
+					</div>
+					<div class="until-launch">
+						Until Launch
+					</div>
+				</div><!-- countdown end -->
+
+				<!-- Newsletter form start -->
+				<div id="subscribe-wrapper">
+					<div id="newsletter">
+						<div class="newsletter" aria-live="polite">
+
+							<form
+								action="https://api.web3forms.com/submit"
+								id="subscribe"
+								method="POST"
+								name="subscribe"
+							>
+
+								<!-- Web3Forms Access Key -->
+								<input
+									type="hidden"
+									name="access_key"
+									value="08bf191f-1da1-451b-86cb-bd282f9daf20"
+								>
+
+								<!-- Email Notification Subject -->
+								<input
+									type="hidden"
+									name="subject"
+									value="DECENT - New Launch Subscriber"
+								>
+
+								<!-- Sender Name -->
+								<input
+									type="hidden"
+									name="from_name"
+									value="DECENT Website"
+								>
+
+								<!-- Subscription Type -->
+								<input
+									type="hidden"
+									name="subscription_type"
+									value="Launch Newsletter"
+								>
+
+								<!-- Spam Protection -->
+								<input
+									type="checkbox"
+									name="botcheck"
+									style="display: none;"
+									tabindex="-1"
+									autocomplete="off"
+								>
+
+								<!-- Subscriber Email -->
+								<input
+									class="subscribe-requiredField subscribe-email"
+									id="subscribe-email"
+									name="email"
+									placeholder="Email"
+									type="email"
+									autocomplete="email"
+									aria-label="Email address"
+									required
+								>
+
+								<!-- Subscribe Button -->
+								<button
+									type="submit"
+									class="btn btn-padding btn-pc"
+								>
+									<span class="mask"></span>
+									<span class="btn-label">
+										Subscribe
+									</span>
+								</button>
+
+							</form>
+
+						</div>
+					</div>
+				</div>
+				<!-- Newsletter form end -->
+			</div>
+		</main>
+		<!-- COMING SOON MODE (temporary) end -->
+
+		<!-- COMING SOON MODE: original homepage disabled - remove this <template> wrapper to restore -->
+		<template data-coming-soon-hidden>
 		<!-- preloader start -->
 		<div class="preloader-bg animated"></div>
 		<div id="preloader">
@@ -781,11 +938,15 @@
 
 			</div><!--  right side end -->
 		</div><!-- multiScroll end -->
+		</template>
+		<!-- COMING SOON MODE: end of disabled original homepage -->
 		<!-- scripts start -->
 		<script src="js/plugins.js" type="text/javascript">
 		</script> 
 		<script src="js/cohen.js" type="text/javascript">
 		</script><!-- scripts end -->
+		<!-- COMING SOON MODE: style switcher disabled - remove this <template> wrapper to restore -->
+		<template data-coming-soon-hidden>
 		<!-- styleswitch [for demonstration purposes only || it should be removed completely by the end user] START -->
 		<div class="s-close" id="customizer">
 			<span class="corner left-position"><i class="fa fa-cog"></i></span>
@@ -835,6 +996,8 @@
 				</div>
 			</div>
 		</div><!-- styleswitch END -->
+		</template>
+		<!-- COMING SOON MODE: end of disabled style switcher -->
 
 	<script>
 	document.addEventListener("DOMContentLoaded", function () {

@@ -309,23 +309,27 @@
 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
 		onMobile = true;
 	}
-	if ((onMobile === false)) {
-		$("#ms-wrapper").multiscroll({
-			anchors: ['home', 'about', 'services', 'contact'],
-			navigation: true,
-			navigationTooltips: ['Home', 'About', 'Services', 'Contact'],
-			loopBottom: true,
-			loopTop: true
-		});
-	} else {
-		$("#ms-wrapper").multiscroll({
-			anchors: ['home', 'about', 'services', 'contact'],
-			navigation: true,
-			navigationTooltips: ['Home', 'About', 'Services', 'Contact'],
-			loopBottom: true,
-			loopTop: true
-		});
-		$("#ms-wrapper").multiscroll.destroy();
+	// Guarded: multiScroll throws when #ms-wrapper is absent (coming-soon mode),
+	// which would stop the countdown and newsletter handlers below from binding.
+	if ($("#ms-wrapper").length) {
+		if ((onMobile === false)) {
+			$("#ms-wrapper").multiscroll({
+				anchors: ['home', 'about', 'services', 'contact'],
+				navigation: true,
+				navigationTooltips: ['Home', 'About', 'Services', 'Contact'],
+				loopBottom: true,
+				loopTop: true
+			});
+		} else {
+			$("#ms-wrapper").multiscroll({
+				anchors: ['home', 'about', 'services', 'contact'],
+				navigation: true,
+				navigationTooltips: ['Home', 'About', 'Services', 'Contact'],
+				loopBottom: true,
+				loopTop: true
+			});
+			$("#ms-wrapper").multiscroll.destroy();
+		}
 	}
 	
 	// contact form
